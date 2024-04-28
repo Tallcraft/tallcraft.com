@@ -1603,35 +1603,6 @@ hr:before {
 	background-color: rgba(255,255,255,0.549) !important;
 }
 
-#embed01 {
-	max-width: 100%;
-}
-
-#embed01 .frame {
-	position: relative;
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 83.333333333333%;
-	min-height: 10rem;
-	display: inline-block;
-	max-width: 100%;
-	width: 24rem;
-	vertical-align: top;
-}
-
-#embed01 .frame iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-#embed01 .frame-inner {
-	display: inline-block;
-	max-width: 100%;
-}
-
 .icons {
 	cursor: default;
 	padding: 0;
@@ -1704,12 +1675,6 @@ hr:before {
 
 #icons01 li a + svg {
 	transition: fill 0.25s ease, stroke 0.25s ease;
-}
-
-@media (orientation: portrait) {
-	#embed01 .frame {
-		padding-bottom: 100%;
-	}
 }
 
 @media (max-width: 1680px) {
@@ -3020,7 +2985,7 @@ hr:before {
 		margin-left: calc(-0rem);
 		width: calc(100% + 0rem + 0.4725px);
 	}
-	
+
 	#container08.default > .wrapper > .inner > .full:first-child {
 		margin-top: -0.375rem !important;
 	}
