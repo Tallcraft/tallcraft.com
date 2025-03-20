@@ -81,16 +81,6 @@
 								<use xlink:href="assets/icons.svg#globe"></use>
 							</svg><span class="label">map</span></a>
 					</li>
-					<li>
-						<a href="https://players.tallcraft.com" class="button n03"><svg>
-								<use xlink:href="assets/icons.svg#star"></use>
-							</svg><span class="label">players</span></a>
-					</li>
-					<li>
-						<a href="https://shop.tallcraft.com" class="button n04"><svg>
-								<use xlink:href="assets/icons.svg#cart"></use>
-							</svg><span class="label">shop</span></a>
-					</li>
 				</ul>
 				<div id="container01" class="container default">
 					<div class="wrapper">
@@ -136,14 +126,6 @@
 						</a>
 					</li>
 					<li>
-						<a class="n03" href="https://discord.tallcraft.com">
-							<svg>
-								<use xlink:href="assets/icons.svg#discord"></use>
-							</svg>
-							<span class="label">Discord</span>
-						</a>
-					</li>
-					<li>
 						<a class="n04" href="https://mastodon.social/@tallcraft" rel="me">
 							<svg>
 								<use xlink:href="assets/icons.svg#mastodon"></use>
@@ -156,26 +138,6 @@
 		</div>
 	</div>
 	<script src="assets/main.js"></script>
-	<script>
-		(async () => {
-			let response = await fetch("https://api.tallcraft.com/", {
-				"credentials": "omit",
-				"headers": {
-					"content-type": "application/json",
-				},
-				"body": "{\"operationName\":null,\"variables\":{},\"query\":\"{\\n mcServer(serverId: \\\"global\\\") {\\n status {\\n onlinePlayerCount\\n }\\n }\\n}\\n\"}",
-				"method": "POST",
-			});
-			let result = await response.json();
-			let playerCount = result?.data?.mcServer?.status?.onlinePlayerCount;
-
-			if (playerCount) {
-				let counter = document.getElementById("playercounter");
-				counter.style.visibility = "initial";
-				counter.innerText = `${playerCount} players online`;
-			}
-		})();
-	</script>
 </body>
 
 </html>
